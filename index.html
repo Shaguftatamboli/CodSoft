@@ -1,60 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Web Design Mastery | fashion Moments</title>
-  </head>
-  <body>
-    <nav>
-      <ul class="nav__links">
-        <li class="link"><a href="#">HOME</a></li>
-        <li class="link"><a href="#">ABOUT US</a></li>
-        <li class="link"><a href="#">OFFER</a></li>
-        <li class="link"><a href="#">SOCIAL</a></li>
-        <li class="link"><a href="#">CONTACT</a></li>
-      </ul>
-    </nav>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator using javascript - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <div class="container">
-      <div class="container__left">
-        <div class="left__content">
-          <h4>Best guide for you</h4>
-          <p>
-            "Unleash your style with our latest collection!
-             Elevate your wardrobe with fashion-forward pieces that blend comfort and trend. 
-             From casual chic to statement glam, find your perfect look. Quality meets style –
-             shop now and redefine your fashion journey!"
-          </p>
-        </div>
+<div class="container">
+  <div class="calculator">
+    <form>
+      <div class="display">
+        <input type="text" name="display">
       </div>
-      <div class="container__right">
-        <img src="women.png" alt="women" />
-        <div class="right__content">
-          <h1>BRAND 99</h1>
-          <h4>The Real Clothing Store</h4>
-          <p>
-            "Discover your style with our curated collection of 
-            trendy and timeless clothing. From casual essentials to statement pieces, 
-            we've got your wardrobe covered. Explore quality fabrics, 
-            chic designs, and unbeatable prices. Elevate your fashion game with us!"
-          </p>
-          <div class="action__btns">
-            <button class="btn primary__btn">Explore</button>
-            <button class="btn secondary__btn">See More</button>
-          </div>
-          <div class="socials">
-            <span><i class="ri-instagram-line"></i></span>
-            <span><i class="ri-twitter-fill"></i></span>
-            <span><i class="ri-facebook-fill"></i></span>
-          </div>
-        </div>
+      <div>
+        <input type="button" value="AC" onclick="display.value = '' " class="operator">
+        <input type="button" value="DE" onclick="display.value =  display.value.toString().slice(0,-1)" class="operator">
+        <input type="button" value="." onclick="display.value += '.' " class="operator">
+        <input type="button" value="/" onclick="display.value += '/' " class="operator">
       </div>
-    </div>
-  </body>
+      <div>
+        <input type="button" value="7" onclick="display.value += '7' ">
+        <input type="button" value="8" onclick="display.value += '8' ">
+        <input type="button" value="9" onclick="display.value += '9' ">
+        <input type="button" value="*" onclick="display.value += '*' " class="operator">
+      </div>
+      <div>
+        <input type="button" value="4" onclick="display.value += '4' ">
+        <input type="button" value="5" onclick="display.value += '5' ">
+        <input type="button" value="6" onclick="display.value += '6' ">
+        <input type="button" value="-" onclick="display.value += '-' " class="operator">
+      </div>
+      <div>
+        <input type="button" value="1" onclick="display.value += '1' ">
+        <input type="button" value="2" onclick="display.value += '2' ">
+        <input type="button" value="3" onclick="display.value += '3' ">
+        <input type="button" value="+" onclick="display.value += '+' " class="operator">
+      </div>
+      <div>
+        <input type="button" value="00" onclick="display.value += '00' ">
+        <input type="button" value="0" onclick="display.value += '0' ">
+        <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal operator">
+       
+      </div>
+    </form>
+  </div>
+</div>
+
+
+</body>
 </html>
